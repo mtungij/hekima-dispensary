@@ -1,0 +1,203 @@
+* {
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "afyasoft";
+	src: url("./Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+	background: #f8fafc;
+	font-family: "afyasoft" !important;
+}
+
+.main-container {
+	display: grid;
+	grid-template-columns: 260px 1fr;
+	grid-template-rows: auto 1fr auto;
+	align-items: start;
+}
+
+nav {
+	background-color: #01d8da;
+	color: white;
+}
+
+nav > div.navbar1 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #01d8da;
+	height: fit-content;
+	padding: 10px 20px 0px 20px;
+	box-shadow: 1px 1px 5px #bdbec0;
+
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+nav > div.navbottom {
+	height: 70px;
+}
+
+i {
+	font-size: 1.2rem;
+}
+
+nav ul {
+	display: flex;
+	column-gap: 1.2rem;
+	align-items: center;
+	list-style-type: none;
+	list-style-position: outside;
+	margin-inline-start: 0;
+	padding-inline-start: 0;
+}
+
+ul {
+	list-style-type: none;
+	list-style-position: outside;
+	margin-inline-start: 0;
+	padding-inline-start: 0;
+}
+
+/* aside */
+
+aside {
+	grid-row: 1 / span 3;
+	background: #f8fafc;
+	height: 100dvh;
+	overflow-y: auto;
+	position: sticky;
+	top: 0;
+}
+
+aside #scroll-snap {
+	background-color: #e2e8f0;
+	padding: 0rem 5px 0.9rem 5px;
+	box-shadow: 1px 1px 3px rgb(231, 229, 229);
+	position: sticky;
+	top: 0;
+}
+
+.list-hover-effect {
+	padding: 8px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: #8c8d8d;
+}
+
+.list-hover-effect:hover {
+	color: #01d8da;
+	font-weight: 500;
+}
+/* aside ul.py-3 > li:not(:last-child),
+ul.reports-list > li:not(:last-child) {
+	border-bottom: 1px solid #e2e8f0;
+} */
+
+.drop-down-panel1,
+.drop-down-panel2,
+.drop-down-panel3,
+.drop-down-panel4,
+.drop-down-panel5,
+.drop-down-panel16,
+.drop-down-panel7,
+.drop-down-panel8,
+.drop-down-panel9,
+.drop-down-panel10 {
+	display: none;
+	/* background-color: #e2e8f0; */
+	padding-left: 1.2rem;
+}
+
+aside #scroll-snap ul li button.active {
+	background-color: #01d8da;
+}
+
+.pl-2 {
+	padding-left: 8px;
+}
+
+.navbtn {
+	border: none;
+	border-radius: 50px;
+	background-color: hsl(181, 99%, 45%);
+}
+
+#dashboard {
+	background-color: transparent;
+	margin-top: -70px;
+}
+
+.bg-progress {
+	background: linear-gradient(to right, rgb(252, 52, 252), rgb(255, 201, 255));
+}
+
+.bg-progress2 {
+	background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+.bg-progress3 {
+	background-image: linear-gradient(to right, #decba4, #3e5151);
+}
+
+.bg-progress4 {
+	background-image: linear-gradient(to right, #8360c3, #2ebf91);
+}
+
+.bg-progress5 {
+	background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.bg-progress6 {
+	background-image: linear-gradient(to right, #fffbd5, #b20a2c);
+}
+
+.bg-progress7 {
+	background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+
+.bg-progress8 {
+	background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+.bg-progress9 {
+	background-image: linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%);
+}
+
+.bg-progress10 {
+	background-image: linear-gradient(to right, #00b09b, #96c93d);
+}
+
+.bg-progress11 {
+	background-image: linear-gradient(
+		to right,
+		rgb(242, 112, 156),
+		rgb(255, 148, 114)
+	);
+}
+
+.popup-btn {
+	background-color: #01d8da;
+	color: white;
+}
+
+tbody > tr:nth-child(even) {
+	background-color: #dafdfd !important;
+	color: rgb(75, 73, 73) !important;
+}
+
+.profile-container,
+.profile {
+	box-shadow: 4px 4px 5px 5px #eee;
+	background-color: white;
+	padding: 15px;
+}
