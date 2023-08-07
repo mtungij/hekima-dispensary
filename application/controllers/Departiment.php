@@ -13,19 +13,23 @@ class Departiment extends CI_Controller
 
     public function create() {
         $data = array(
-            "user_id" => $this->input->post('user_id'),
+            "staff_id" => $this->input->post('staff_id'),
             "name" => $this->input->post('departiment'),
         );
 
-        $this->DepartimentModel->create_departiment($data);
-
-        redirect('departiment');
+        $q = $this->DepartimentModel->create_departiment($data);
+        if($q) {
+            $this->session->set_flashdata('departimentRegistered', 'Departiment was successfully registered.');
+            redirect('departiment');
+        }
     }
 
     public function delete($id) {
-        $this->DepartimentModel->delete_departiment($id);
-
-        redirect('departiment');
+        $q = $this->DepartimentModel->delete_departiment($id);
+        if($q) {
+            $this->session->set_flashdata('departimentDeleted', 'Departiment is deleted.');
+            redirect('departiment');
+        }
     }
 
 

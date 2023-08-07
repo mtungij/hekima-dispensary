@@ -13,6 +13,7 @@
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
+    <?php echo form_open('surgical/create')?>
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Register surgicals</h1>
@@ -22,24 +23,38 @@
         <div class="row g-3">
             <div class="col-md-6">
                 <label for="surgical" class="form-label">surgical</label>
-                <input type="text" class="form-control" id="surgical" required>
+                <input type="text" class="form-control" name="surgical" id="surgical" required>
             </div>
             <div class="col-md-6">
                 <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" id="price">
+                <input type="number" class="form-control" name="price" id="price">
             </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </div>
+    <?php echo form_close()?>
   </div>
 </div>
 
 
 <div class="py-5">
+
+ <!-- Alert box -->
+    <?php if($this->session->flashdata('surgicalRegistered')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> <?= $this->session->flashdata('surgicalRegistered') ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php elseif($this->session->flashdata('surgicalDeleted')): ?>
+         <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Deleted!</strong> <?= $this->session->flashdata('surgicalDeleted') ?>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif ?>
     <h3 class="py-1">All surgicals</h3>
 
     <table class="table table-striped" id="dataTable">
@@ -52,13 +67,14 @@
             </tr>
         </thead>
         <tbody>
+          <?php $rowId = 1 ?>
             <?php foreach($surgicals as $surgical): ?>
                 <tr>
-                    <td>01</td>
+                    <td><?= $rowId++ ?></td>
                     <td><?= $surgical->name ?></td>
-                    <td><?= $surgical->price ?></td>
+                    <td><?= number_format($surgical->price) ?></td>
                     <td>
-                        <a href="#">delete</a>
+                        <a href="<?= site_url('surgical/delete/'.$surgical->surgical_id) ?>">delete</a>
                     </td>
                 </tr>
             <?php endforeach?>

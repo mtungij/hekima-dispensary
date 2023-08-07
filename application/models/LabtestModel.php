@@ -9,10 +9,11 @@ class LabtestModel extends CI_Model
 
     public function create_labtest($data) {
         $this->db->insert('Test_subcategory', $data);
+        return true;
     }
 
     public function delete_labtest($id) {
         $this->db->delete('Test_subcategory', array("Test_subcategory_id" => $id) );
-        
+        return true;
     }
 }

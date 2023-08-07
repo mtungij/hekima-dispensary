@@ -13,19 +13,27 @@ class Labtest extends CI_Controller
 
     public function create() {
         $data = array(
-            "user_id" => $this->input->post('user_id'),
             "name" => $this->input->post('labtest'),
+            "price" => $this->input->post('price')
         );
 
-        $this->LabtestModel->create_labtest($data);
+        $q = $this->LabtestModel->create_labtest($data);
 
-        redirect('labtest');
+         if($q) {
+            $this->session->set_flashdata('labtestRegistered', 'Labtest is successfully registered.');
+            redirect('labtest');
+        }
+
     }
 
     public function delete($id) {
-        $this->LabtestModel->delete_labtest($id);
+        $q = $this->LabtestModel->delete_labtest($id);
+        
+         if($q) {
+            $this->session->set_flashdata('labtestDeleted', 'Labtest is successfully deleted.');
+            redirect('labtest');
+        }
 
-        redirect('labtest');
     }
 
 

@@ -13,19 +13,26 @@ class procedure extends CI_Controller
 
     public function create() {
         $data = array(
-            "user_id" => $this->input->post('user_id'),
+            "price" => $this->input->post('price'),
             "name" => $this->input->post('procedure'),
         );
 
-        $this->ProcedureModel->create_procedure($data);
+        $q = $this->ProcedureModel->create_procedure($data);
+        
+         if($q) {
+            $this->session->set_flashdata('procedureRegistered', 'Procedure is successfully registered.');
+            redirect('procedure');
+        }
 
-        redirect('procedure');
     }
 
     public function delete($id) {
-        $this->ProcedureModel->delete_procedure($id);
+        $q = $this->ProcedureModel->delete_procedure($id);
 
-        redirect('procedure');
+        if($q) {
+            $this->session->set_flashdata('procedureDeleted', 'Procedure is successfully deleted.');
+            redirect('procedure');
+        }
     }
 
 

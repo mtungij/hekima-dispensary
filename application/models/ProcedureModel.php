@@ -9,10 +9,11 @@ class ProcedureModel extends CI_Model
 
     public function create_procedure($data) {
         $this->db->insert('Procedure', $data);
+        return true;
     }
 
     public function delete_procedure($id) {
         $this->db->delete('Procedure', array("procedure_id" => $id) );
-        
+        return true;
     }
 }

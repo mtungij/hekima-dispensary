@@ -13,19 +13,25 @@ class surgical extends CI_Controller
 
     public function create() {
         $data = array(
-            "user_id" => $this->input->post('user_id'),
             "name" => $this->input->post('surgical'),
+            "price" => $this->input->post('price'),
         );
 
-        $this->SurgicalModel->create_surgical($data);
+        $q = $this->SurgicalModel->create_surgical($data);
 
-        redirect('surgical');
+         if($q) {
+            $this->session->set_flashdata('surgicalRegistered', 'Surgical is successfully registered.');
+            redirect('surgical');
+        }
     }
 
     public function delete($id) {
-        $this->SurgicalModel->delete_surgical($id);
+        $q = $this->SurgicalModel->delete_surgical($id);
 
-        redirect('surgical');
+         if($q) {
+            $this->session->set_flashdata('surgicalDeleted', 'Surgical is successfully deleted.');
+            redirect('surgical');
+        }
     }
 
 

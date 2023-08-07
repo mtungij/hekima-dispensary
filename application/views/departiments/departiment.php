@@ -13,49 +13,55 @@
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
+    <?php echo form_open('departiment/create')?>
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Register Departiments</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="row g-3">
+        <div class="row p-3">
             <div class="col-md-6">
+              <input type="hidden" name="staff_id" value="1">
                 <label for="departiment" class="form-label">Departiment</label>
-                <input type="text" class="form-control" id="departiment" required>
-            </div>
-            <div class="col-md-6">
-                <label for="price" class="form-label">Price</label>
-                <input type="number" class="form-control" id="price">
+                <input type="text" class="form-control" name="departiment" id="departiment" required>
             </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </div>
     </div>
+  <?php echo form_close()?>
   </div>
 </div>
 
 
 <div class="py-5">
+
+    <!-- Alert box -->
+    <?php if($this->session->flashdata('departimentRegistered')): ?>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>Success!</strong> <?= $this->session->flashdata('departimentRegistered') ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    <?php endif ?>
     <h3 class="py-1">All departiments</h3>
     <table class="" id="dataTable">
         <thead>
             <tr>
                 <th>S/NO</th>
                 <td>Name</td>
-                <th>Price</th>
                 <th>Acrion</th>
             </tr>
         </thead>
         <tbody>
+          <?php $rowId = 1?>
             <?php foreach($departiments as $departiment): ?>
                 <tr>
-                    <td>1</td>
+                    <td><?= $rowId++ ?></td>
                     <td><?= $departiment->name ?></td>
-                    <td>400</td>
                     <td>
                         <a href="#">delete</a>
                     </td>

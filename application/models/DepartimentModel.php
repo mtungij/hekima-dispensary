@@ -9,10 +9,11 @@ class DepartimentModel extends CI_Model
 
     public function create_departiment($data) {
         $this->db->insert('Departiment', $data);
+        return true;
     }
 
     public function delete_departiment($id) {
         $this->db->delete('Departiment', array("departiment_id" => $id) );
-        
+        return true;
     }
 }

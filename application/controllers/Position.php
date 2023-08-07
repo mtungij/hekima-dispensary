@@ -13,19 +13,23 @@ class Position extends CI_Controller
 
     public function create() {
         $data = array(
-            "user_id" => $this->input->post('user_id'),
             "name" => $this->input->post('position'),
         );
 
-        $this->PositionModel->create_position($data);
-
-        redirect('position');
+        $q = $this->PositionModel->create_position($data);
+         if($q) {
+            $this->session->set_flashdata('positionRegistered', 'Position is successfully registered.');
+            redirect('position');
+        }
     }
 
     public function delete($id) {
-        $this->PositionModel->delete_position($id);
-
-        redirect('position');
+        $q = $this->PositionModel->delete_position($id);
+        
+         if($q) {
+            $this->session->set_flashdata('positionDeleted', 'Position is successfully deleted.');
+            redirect('position');
+        }
     }
 
 

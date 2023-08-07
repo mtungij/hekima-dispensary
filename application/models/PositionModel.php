@@ -9,10 +9,11 @@ class PositionModel extends CI_Model
 
     public function create_position($data) {
         $this->db->insert('position', $data);
+        return true;
     }
 
     public function delete_position($id) {
         $this->db->delete('position', array("position_id" => $id) );
-        
+        return true;
     }
 }

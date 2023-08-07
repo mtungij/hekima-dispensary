@@ -22,7 +22,8 @@ class Staff extends CI_controller
     }
 
     public function staff_profile($id) {
-        $this->load->view('staff/staff_profile');
+        $staff = $this->StaffModel->get_single_staff($id);
+        $this->load->view('staff/staff_profile', ["staff" => $staff]);
     }
 
     public function login_index()
@@ -79,5 +80,57 @@ class Staff extends CI_controller
             redirect('staff');
         }
         
+    }
+
+
+
+     public function update() {
+        $data = array(
+            "id" => $this->input->post('id'),
+            "first_name" => $this->input->post('first_name'),
+            "last_name" => $this->input->post('last_name'),
+            "username" => $this->input->post('username'),
+            "email" => $this->input->post('email'),
+            "phone_number" => $this->input->post('phone_number'),
+            "departiment" => $this->input->post('departiment'),
+            "position" => $this->input->post('position'),
+            "gender" => $this->input->post('gender'),
+            "password" => $this->input->post('password'),
+            //"image_url" => $this->input->post('image_url'),
+            //"attachment_url" => $this->input->post('attachment_url')
+        );
+
+        $q = $this->StaffModel->update_staff($data);
+        if($q) {
+            $this->session->set_flashdata('updateSuccess', 'Staff is updated successifuly.');
+            redirect('staff/staff_profile/'.$data["id"]);
+        } 
+        
+    }
+
+    public function update_status($status, $id) {
+        if($status == "active") {
+            $staff_status = array(
+                "status" => "blocked"
+            );
+            $this->StaffModel->block_staff($staff_status, $id);
+            $this->session->set_flashdata('blocked', 'Staff is now blocked, he/she can not access this software anymore!');
+            redirect("staff/staff_profile/".$id);
+        } else {
+            $staff_status = array(
+                "status" => "active"
+            );
+            $this->StaffModel->block_staff($staff_status, $id);
+            $this->session->set_flashdata('unblocked', 'Staff is unblocked successfully!');
+            redirect("staff/staff_profile/".$id);
+        }
+    }
+
+    public function delete($id) {
+        $q = $this->StaffModel->delete_staff($id);
+        if($q) {
+            $this->session->set_flashdata('staffDeleted', 'Staff is deleted, he/she is no longer an employer of Hekima Dispensary.');
+            redirect('staff/staffs');
+        }
     }
 }

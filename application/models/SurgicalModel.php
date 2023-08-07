@@ -9,10 +9,11 @@ class SurgicalModel extends CI_Model
 
     public function create_Surgical($data) {
         $this->db->insert('Surgical', $data);
+        return true;
     }
 
     public function delete_surgical($id) {
         $this->db->delete('Surgical', array("Surgical_id" => $id) );
-        
+        return true;
     }
 }
