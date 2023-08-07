@@ -5,11 +5,15 @@ class Staff extends CI_controller
     public function __construct() {
         parent::__construct();
         $this->load->model('StaffModel');
+        $this->load->model('DepartimentModel');
+        $this->load->model('PositionModel');
     }
 
     public function index() {
         $staffs = $this->StaffModel->all_staff();
-        $this->load->view('staff/add_staff', ["staffs" => $staffs]);
+        $departiments = $this->DepartimentModel->get_all_departiments();
+        $positions = $this->PositionModel->get_all_positions();
+        $this->load->view('staff/add_staff', ["staffs" => $staffs, 'departiments' => $departiments, "positions" => $positions]);
     }
 
     public function staffs() {

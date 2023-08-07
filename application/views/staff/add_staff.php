@@ -47,10 +47,10 @@
           <div class="col-md-6">
               <label for="departiment" class="form-label">Departiment</label>
               <select class="form-select" aria-label="Default select example" name="departiment" id="departiment" required>
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="">Select departiment</option>
+                <?php foreach($departiments as $departiment): ?>
+                <option value="<?= $departiment->name ?>"><?= $departiment->name ?></option>
+                <?php endforeach ?>
              </select>
           </div>
       </div>
@@ -58,19 +58,18 @@
           <div class="col-md-6">
               <label for="position" class="form-label">Position</label>
               <select class="form-select" aria-label="Default select example" name="position" id="position" required>
-                <option selected>Select position</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="">Select position</option>
+                <?php foreach($positions as $position): ?>
+                <option value="<?= $position->name ?>"><?= $position->name ?></option>
+                <?php endforeach ?>
              </select>
           </div>
           <div class="col-md-6">
               <label for="gender" class="form-label">Gender</label>
               <select class="form-select" aria-label="Default select example" name="gender" id="gender" required>
                 <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
              </select>
           </div>
       </div>
