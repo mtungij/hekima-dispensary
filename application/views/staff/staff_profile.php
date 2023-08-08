@@ -2,6 +2,15 @@
 <?php include APPPATH . 'views/utils/sidebar.php' ?>
 <?php include APPPATH . 'views/utils/navbar.php' ?>
 
+<?php if($this->session->flashdata('blocked')): ?>
+<div id="actionToast" style="width: 40%; background-color: red; color: white; position: absolute; bottom: 10px; right: 10px; padding: 1.15rem; border-radius: 7px; z-index: 1">
+    <?= $this->session->flashdata('blocked') ?>
+</div>
+<?php elseif($this->session->flashdata('unblocked')):?>
+<div id="actionToast" style="width: 40%; background-color: green; color: white; position: absolute; bottom: 10px; right: 10px; padding: 1.15rem; border-radius: 7px; z-index: 1">
+    <?= $this->session->flashdata('unblocked') ?>
+</div>
+<?php endif ?>
 <section class="content profile-page px-4" style="display: grid; grid-template-columns: 300px 1fr; gap: 18px;">   
      <div class="profile-container rounded my-2">
          <img src="<?php echo base_url('public/images/doctors/member2.png') ?>" width="150" height="150" class="rounded-circle mx-auto d-block" style="border: 3px solid #bbb" alt="">
@@ -25,7 +34,7 @@
                     <a title="unblock this user?" class="text-white" href="<?= site_url('staff/update_status/'.$staff->status.'/'.$staff->id) ?>">Unblock</a>
                 </button>
               <?php endif ?>  
-                <button class="btn btn-danger ">
+                <button class="btn btn-danger " id="actionBtn">
                     <a class="text-white" title="Delete this user?" href="<?= site_url('staff/delete/'.$staff->id) ?>">Delete</a>
                 </button>
                 
@@ -117,5 +126,12 @@
             </div>
         </div>
 </section>
+
+<script>
+    const toast = document.getElementById('actionToast')
+        setTimeout(() => {
+            toast.style.display = "none"
+        }, 5000);
+ </script>
 
 <?php include APPPATH . "views/utils/footer.php"?>

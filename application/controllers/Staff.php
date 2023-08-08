@@ -57,29 +57,42 @@ class Staff extends CI_controller
     }
 
     public function create() {
-        $data = array(
-            "first_name" => $this->input->post('first_name'),
-            "last_name" => $this->input->post('last_name'),
-            "username" => $this->input->post('username'),
-            "email" => $this->input->post('email'),
-            "phone_number" => $this->input->post('phone_number'),
-            "departiment" => $this->input->post('departiment'),
-            "position" => $this->input->post('position'),
-            "gender" => $this->input->post('gender'),
-            "password" => $this->input->post('password'),
-            "image_url" => $this->input->post('image_url'),
-            //"attachment_url" => $this->input->post('attachment_url')
-        );
+        $config['upload_path']          = './public/uploads/';
+                $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
-        $q = $this->StaffModel->create_staff($data);
-        if($q) {
-            $this->session->set_flashdata('registerSuccess', 'Staff is registered succcessfully.');
-            redirect('staff');
-        } else {
-            $this->session->set_flashdata('userExist', 'Staff with this username already exist');
-            redirect('staff');
-        }
-        
+                $this->load->library('upload', $config);
+
+                $uplaod = $this->upload->do_upload('image_url');
+                $error = $this->upload->display_errors();
+
+                if ( ! $uplaod && preg_match_all("/You did not select a file to upload./i", $error) < 1 ){
+                    $this->session->set_flashdata('uploadError', $error);
+                    return redirect('staff');
+                } else {
+                    $data = $this->upload->data();
+                    $data = array(
+                        "first_name" => $this->input->post('first_name'),
+                        "last_name" => $this->input->post('last_name'),
+                        "username" => $this->input->post('username'),
+                        "email" => $this->input->post('email'),
+                        "phone_number" => $this->input->post('phone_number'),
+                        "departiment" => $this->input->post('departiment'),
+                        "position" => $this->input->post('position'),
+                        "gender" => $this->input->post('gender'),
+                        "password" => $this->input->post('password'),
+                        "image_url" => "public/uploads/".$data["file_name"],
+                        //"attachment_url" => $this->input->post('attachment_url')
+            );
+    
+            $q = $this->StaffModel->create_staff($data);
+            if($q) {
+                $this->session->set_flashdata('registerSuccess', 'Staff is registered succcessfully.');
+                redirect('staff');
+            } else {
+                $this->session->set_flashdata('userExist', 'Staff with this username already exist');
+                redirect('staff');
+            }
+         } 
     }
 
 
@@ -114,7 +127,7 @@ class Staff extends CI_controller
                 "status" => "blocked"
             );
             $this->StaffModel->block_staff($staff_status, $id);
-            $this->session->set_flashdata('blocked', 'Staff is now blocked, he/she can not access this software anymore!');
+            $this->session->set_flashdata('blocked', 'Staff is now blocked!');
             redirect("staff/staff_profile/".$id);
         } else {
             $staff_status = array(
@@ -129,7 +142,7 @@ class Staff extends CI_controller
     public function delete($id) {
         $q = $this->StaffModel->delete_staff($id);
         if($q) {
-            $this->session->set_flashdata('staffDeleted', 'Staff is deleted, he/she is no longer an employer of Hekima Dispensary.');
+            $this->session->set_flashdata('staffDeleted', 'Staff was deleted successfully!');!
             redirect('staff/staffs');
         }
     }

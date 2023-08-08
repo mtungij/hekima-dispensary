@@ -4,18 +4,23 @@
 
 <section class="p-4 ">
 
-<?php echo form_open('staff/create', array('class'=>"card p-3"))?>
+<?php echo form_open_multipart('staff/create', array('class'=>"card p-3"))?>
 
 <?php if($this->session->flashdata('userExist')): ?>
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-  <strong>Error!</strong> <?= $this->session->flashdata('userExist'); ?>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+    <strong>Error!</strong> <?= $this->session->flashdata('userExist'); ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <?php elseif($this->session->flashdata('registerSuccess')): ?>
   <div class="alert alert-success alert-dismissible fade show" role="alert">
      <strong>Success!</strong> <?= $this->session->flashdata('registerSuccess'); ?>
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+<?php elseif($this->session->flashdata('uploadError')): ?>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Upload error!</strong> <?= $this->session->flashdata('uploadError'); ?>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <?php endif ?>
 
   <div class="tab-pane fade show active" id="pills-current" role="tabpanel" aria-labelledby="pills-current-tab" tabindex="0">
@@ -120,8 +125,8 @@
     </div>
   </div>
 </div> -->
-<?php echo form_close()?>
 
+<?php echo form_close()?>
 
  <div style="margin: 50px 0" class="card bg-white p-3">
     <h4>Recently Staff Members</h4>
