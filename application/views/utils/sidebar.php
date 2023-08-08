@@ -49,6 +49,12 @@
                       <span>Register position</span>
                     </a>
                   </li>
+                  <li>
+                    <a href="<?= site_url('category') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <i class="bi bi-arrow-right"></i>
+                      <span>Register category</span>
+                    </a>
+                  </li>
                </ul>
             </div>
           </li>

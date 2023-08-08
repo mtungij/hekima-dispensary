@@ -5,14 +5,17 @@ class Labtest extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->model('LabtestModel');
+        $this->load->model('CategoryModel');
     }
     public function index() {
         $labtests = $this->LabtestModel->get_all_labtests();
-        $this->load->view('labtests/labtest', ["labtests" => $labtests]);
+        $categories = $this->CategoryModel->get_all_categories();
+        $this->load->view('labtests/labtest', ["labtests" => $labtests, "categories" => $categories]);
     }
 
     public function create() {
         $data = array(
+            "test_category_id" => $this->input->post('category_id'),
             "name" => $this->input->post('labtest'),
             "price" => $this->input->post('price')
         );
