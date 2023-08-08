@@ -58,10 +58,7 @@ CREATE TABLE `departiment` (
   `departiment_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `staff_id` int DEFAULT NULL,
-  PRIMARY KEY (`departiment_id`),
-  KEY `dpt_staff_id_idx` (`staff_id`),
-  CONSTRAINT `dpt_staff_id` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`id`)
+  PRIMARY KEY (`departiment_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -71,7 +68,7 @@ CREATE TABLE `departiment` (
 
 LOCK TABLES `departiment` WRITE;
 /*!40000 ALTER TABLE `departiment` DISABLE KEYS */;
-INSERT INTO `departiment` VALUES (1,'DOCTOR','2023-06-24 12:59:39',1),(3,'RECEPTION','2023-06-24 13:04:56',1),(5,'PHARMACY','2023-07-05 07:26:40',NULL),(19,'RECEPTION','2023-08-04 10:43:01',NULL),(20,'LABORATORY','2023-08-07 15:53:06',1),(21,'SURGERY','2023-08-07 15:54:11',1);
+INSERT INTO `departiment` VALUES (1,'DOCTOR','2023-06-24 12:59:39'),(3,'RECEPTION','2023-06-24 13:04:56'),(5,'PHARMACY','2023-07-05 07:26:40'),(19,'RECEPTION','2023-08-04 10:43:01'),(20,'LABORATORY','2023-08-07 15:53:06'),(21,'SURGERY','2023-08-07 15:54:11');
 /*!40000 ALTER TABLE `departiment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -514,23 +511,21 @@ DROP TABLE IF EXISTS `staff`;
 CREATE TABLE `staff` (
   `id` int NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
   `username` varchar(45) DEFAULT NULL,
   `email` varchar(45) DEFAULT NULL,
   `phone_number` int DEFAULT NULL,
-  `departiment` varchar(45) DEFAULT NULL,
+  `departiment` varchar(255) DEFAULT NULL,
   `position` varchar(100) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `gender` varchar(45) DEFAULT NULL,
   `image_url` varchar(200) DEFAULT NULL,
   `attachment_url` varchar(200) DEFAULT NULL,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `last_name` varchar(45) DEFAULT NULL,
   `status` varchar(45) DEFAULT 'active',
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
-  UNIQUE KEY `email_UNIQUE` (`email`),
-  UNIQUE KEY `phone_number_UNIQUE` (`phone_number`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `username_UNIQUE` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -539,7 +534,7 @@ CREATE TABLE `staff` (
 
 LOCK TABLES `staff` WRITE;
 /*!40000 ALTER TABLE `staff` DISABLE KEYS */;
-INSERT INTO `staff` VALUES (1,'alkado','kado25','alkadosichone@gmail.com',712259906,'DOCTOR','MD','',NULL,NULL,NULL,'2023-06-24 12:49:18',' sichone','active'),(3,'Kilian','kilan23','kilamn@gmail.com',9865435,'DOCTOR',NULL,'1234',NULL,NULL,NULL,'2023-07-05 07:30:56','kilen','active'),(6,'Maria','maria2','alkadoheneliko255@gmail.com',876544,'2','2','1234','2','Screenshot 2023-07-11 221223.png',NULL,'2023-08-07 11:20:55','Sonala','active'),(7,'Monase','jane_doe','forspotify401@gmail.com',989765443,'RECEPTION','DOCTOR','1234','Male','Screenshot 2023-07-13 225251.png',NULL,'2023-08-07 11:35:04','mosokile','active');
+INSERT INTO `staff` VALUES (9,'alkado',NULL,'kado','alkadohs@gmail.com',878675,'DOCTOR','Medical Doctor','1234','Male',NULL,NULL,'active','2023-08-08 09:00:03'),(10,'Mangalita','sichone','mangalita','mangalita@gmail.com',9878765,'PHARMACY','NURSE','1234','Female',NULL,NULL,'active','2023-08-08 09:00:03'),(11,'kadols','Kado3','kado25','alkadosichone@gmail.com',755467654,'RECEPTION','Medical Doctor','1234','Male','pubic/uploads/Screenshot_2023-07-03_173345.png',NULL,'active','2023-08-08 09:21:49'),(12,'kado','academy','kadoacademy','me@gmail.com',456787654,'PHARMACY','Clinical Oficer','1234','Male','pubic/uploads/slide1.png',NULL,'active','2023-08-08 09:28:09'),(14,'mengi','solina','kado7654','me@gmail.com',987654,'RECEPTION','Clinical Oficer','1234','Male','pubic/uploads/',NULL,'active','2023-08-08 10:12:37'),(15,'Minara','soall','minara','forspotify401@gmail.com',8767544,'PHARMACY','Nurse','1234','Male','1691489767',NULL,'active','2023-08-08 10:16:07');
 /*!40000 ALTER TABLE `staff` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -583,11 +578,8 @@ CREATE TABLE `test_category` (
   `test_category_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `test_subcategory_id` int DEFAULT NULL,
-  PRIMARY KEY (`test_category_id`),
-  KEY `lt_category_id_idx` (`test_subcategory_id`),
-  CONSTRAINT `lt_category_id` FOREIGN KEY (`test_subcategory_id`) REFERENCES `test_subcategory` (`test_subcategory_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`test_category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -596,7 +588,7 @@ CREATE TABLE `test_category` (
 
 LOCK TABLES `test_category` WRITE;
 /*!40000 ALTER TABLE `test_category` DISABLE KEYS */;
-INSERT INTO `test_category` VALUES (1,'test 2','2023-06-26 10:33:26',NULL),(2,'Test 1','2023-07-05 07:27:30',NULL);
+INSERT INTO `test_category` VALUES (3,'Category 1','2023-08-08 06:15:55'),(4,'Category 2','2023-08-08 06:16:08'),(5,'Category 3','2023-08-08 06:21:31');
 /*!40000 ALTER TABLE `test_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -613,13 +605,10 @@ CREATE TABLE `test_subcategory` (
   `price` int DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `test_category_id` int DEFAULT NULL,
-  `staff_id` int DEFAULT NULL,
   PRIMARY KEY (`test_subcategory_id`),
   KEY `lt_category_id_idx` (`test_category_id`),
-  KEY `lt_subcategory_staff_id_idx` (`staff_id`),
-  CONSTRAINT `lt_subcategory_id` FOREIGN KEY (`test_category_id`) REFERENCES `test_category` (`test_category_id`),
-  CONSTRAINT `lt_subcategory_staff_id` FOREIGN KEY (`staff_id`) REFERENCES `staff` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `lt_subcategory_id` FOREIGN KEY (`test_category_id`) REFERENCES `test_category` (`test_category_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -628,7 +617,7 @@ CREATE TABLE `test_subcategory` (
 
 LOCK TABLES `test_subcategory` WRITE;
 /*!40000 ALTER TABLE `test_subcategory` DISABLE KEYS */;
-INSERT INTO `test_subcategory` VALUES (2,'test5',7676,'2023-06-26 10:38:13',NULL,NULL),(4,'Abnomal pain',6000,'2023-08-07 16:44:34',NULL,NULL),(5,'test 3',40600,'2023-08-07 16:51:50',NULL,NULL);
+INSERT INTO `test_subcategory` VALUES (7,'Test0',5000,'2023-08-08 06:47:32',4),(8,'Test 1',7000,'2023-08-08 07:04:56',5),(9,'Test0',8000,'2023-08-08 07:05:41',3);
 /*!40000 ALTER TABLE `test_subcategory` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -708,4 +697,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-07 20:16:57
+-- Dump completed on 2023-08-08 13:21:50
