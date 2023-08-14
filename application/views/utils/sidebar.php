@@ -39,19 +39,16 @@
                <ul class="d-grid gap-2">
                   <li>
                     <a href="<?= site_url('departiment') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Register departiment</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= site_url('position') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Register position</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= site_url('category') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Register category</span>
                     </a>
                   </li>
@@ -71,19 +68,16 @@
                <ul class="d-grid gap-2">
                   <li>
                     <a href="<?= site_url('labtest') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Lab test price</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= site_url('procedure') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Procedure price</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= site_url('surgical') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Surgical price</span>
                     </a>
                   </li>
@@ -103,19 +97,16 @@
                <ul class="d-grid gap-2">
                   <li>
                     <a href="<?= site_url('staff') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Add staff</span>
                     </a>
                   </li>
                   <li>
                     <a href="<?= site_url('staff/staffs') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>All staff</span>
                     </a>
                   </li>
                   <!-- <li>
                     <a href="<?php //site_url('surgical') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
                       <span>Surgical price</span>
                     </a>
                   </li> -->
@@ -134,23 +125,20 @@
             <div class="drop-down-panel3">
                <ul class="d-grid gap-2">
                   <li>
-                    <a href="<?= site_url('patients') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
-                      <span>All patients</span>
+                    <a href="<?php echo base_url('patient/create') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <span>Register patient</span>
                     </a>
                   </li>
                   <li>
-                    <a href="<?= site_url('patients') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
-                      <span>Add patient</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="<?= site_url('patients/id') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
-                      <i class="bi bi-arrow-right"></i>
+                    <a href="<?php echo base_url('Patient/all_patient') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
                       <span>Patient profile</span>
                     </a>
                   </li>
+                  <!-- <li>
+                    <a href="<?= site_url('patients/id') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <span>Patient profile</span>
+                    </a>
+                  </li> -->
                </ul>
             </div>
           </li>
