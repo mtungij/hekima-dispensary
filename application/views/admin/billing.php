@@ -245,4 +245,7 @@
             </div>
         </div>                
     </div>
+
+    <!-- mambo vp -->
+
     <?php include APPPATH . "views/includes/footer.php"?>
