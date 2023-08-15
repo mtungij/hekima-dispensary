@@ -1,7 +1,7 @@
 
-<footer class="text-center">
+<!-- <footer class="text-center">
    <p>Footer</p>
-</footer>
+</footer> -->
 </div>
 
        <script>

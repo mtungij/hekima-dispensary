@@ -154,15 +154,15 @@
     </div>
 
     <section class="p-2" style="background: white">
-        <h3>Recently patients</h3>
+        <h3>PATIENTS TRANSFER STATUS</h3>
 
         <table class="table table-striped" id="dataTable">
             <thead>
                 <tr>
                     <th>S/NO</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Disease</th>
+                    <th>Patient Name</th>
+                    <th>Phone Number</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -170,194 +170,9 @@
                     <td>01</td>
                     <td>Jumahh</td>
                     <td>Kehrman</td>
-                    <td>Malaria</td>
+                    <td>Discharged</td>
                 </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Jumahh</td>
-                    <td>Kehrman</td>
-                    <td>Malaria</td>
-                </tr>
+                
             </tbody>
         </table>
     </section>
