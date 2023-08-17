@@ -89,18 +89,25 @@
           </div>
       </div>
 
-      <div class="row g-3 py-3">
-        <div class="col-md-3">
+      <div class="row g-3 ">
+        <div class="col-md-6">
             <label for="image_url" class="form-label">Profile Picture</label>
             <input type="file" class="form-control" name="image_url">
         </div>
+        <div class="col-md-6">
+            <label for="pnumber" class="form-label">Salary</label>
+            <input type="number" class="form-control" name="salary" id="pnumber">
+          </div>
+
       </div>
     </div>
 
  <!-- Button trigger modal -->
-<button type="submit" class="btn btn-primary my-2 d-block" style="width: 30%; margin-left: 35%">
-  Submit
-</button>
+ <div class="text-center">
+  <button type="submit" class="btn btn-primary my-2 d-block mx-auto">
+    Submit
+  </button>
+</div>
 
 <!-- Modal
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -127,10 +134,15 @@
 </div> -->
 
 <?php echo form_close()?>
-
  <div style="margin: 50px 0" class="card bg-white p-3">
     <h4>Recently Staff Members</h4>
 
+    <div class="col-lg-6">
+          <div class="pull-right">
+              <a href="<?php echo base_url("admin/print_data"); ?>" class="btn btn-info btn-sm" target="_blank"><i class="bi bi-filetype-pdf"></i>Print</a>
+          </div>
+      </div>
+  
     <table class="table table-striped" id="dataTable">
         <thead>
             <tr>

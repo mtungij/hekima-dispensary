@@ -80,6 +80,7 @@ class Staff extends CI_controller
                         "position" => $this->input->post('position'),
                         "gender" => $this->input->post('gender'),
                         "password" => $this->input->post('password'),
+                        "salary" => $this->input->post('salary'),
                         "image_url" => "public/uploads/".$data["file_name"],
                         //"attachment_url" => $this->input->post('attachment_url')
             );
