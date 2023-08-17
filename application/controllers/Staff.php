@@ -147,4 +147,20 @@ class Staff extends CI_controller
             redirect('staff/staffs');
         }
     }
+
+    public function print_data()
+    {
+         $staffs=$this->StaffModel->all_staff();
+    
+        //  echo "<pre>";
+        //  print_r($staffs);
+        //  echo "<pre>";
+        //  exit;
+
+         $mpdf = new \Mpdf\Mpdf();
+         $html = $this->load->view('report/all_staff',["staffs"=>$staffs],true);
+         $mpdf->WriteHTML($html);
+         $mpdf->Output(); // opens in browser
+         //$mpdf->Output('arjun.pdf','D'); // it downloads the file into the user system, with give name
+    }
 }

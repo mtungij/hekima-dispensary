@@ -139,7 +139,7 @@
 
     <div class="col-lg-6">
           <div class="pull-right">
-              <a href="<?php echo base_url("admin/print_data"); ?>" class="btn btn-info btn-sm" target="_blank"><i class="bi bi-filetype-pdf"></i>Print</a>
+              <a href="<?php echo base_url("staff/print_data"); ?>" class="btn btn-info btn-sm" target="_blank"><i class="bi bi-filetype-pdf"></i>Print</a>
           </div>
       </div>
   
