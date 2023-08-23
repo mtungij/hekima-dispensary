@@ -22,8 +22,10 @@ class Staff extends CI_controller
     }
 
     public function staff_profile($id) {
+        $departiments = $this->DepartimentModel->get_all_departiments();
+        $positions = $this->PositionModel->get_all_positions();
         $staff = $this->StaffModel->get_single_staff($id);
-        $this->load->view('staff/staff_profile', ["staff" => $staff]);
+        $this->load->view('staff/staff_profile', ["staff" => $staff, "departiments"=>$departiments, "positions"=>$positions]);
     }
 
     public function login_index()
@@ -57,7 +59,7 @@ class Staff extends CI_controller
     }
 
     public function create() {
-        $config['upload_path']          = './public/uploads/';
+        $config['upload_path']          = './assets/uploads/';
                 $config['allowed_types']        = 'gif|jpg|png|jpeg';
 
                 $this->load->library('upload', $config);
@@ -80,7 +82,7 @@ class Staff extends CI_controller
                         "position" => $this->input->post('position'),
                         "gender" => $this->input->post('gender'),
                         "password" => $this->input->post('password'),
-                        "image_url" => "public/uploads/".$data["file_name"],
+                        "image_url" => "assets/uploads/".$data["file_name"],
                         //"attachment_url" => $this->input->post('attachment_url')
             );
     
@@ -108,7 +110,7 @@ class Staff extends CI_controller
             "departiment" => $this->input->post('departiment'),
             "position" => $this->input->post('position'),
             "gender" => $this->input->post('gender'),
-            "password" => $this->input->post('password'),
+            //"password" => $this->input->post('password'),
             //"image_url" => $this->input->post('image_url'),
             //"attachment_url" => $this->input->post('attachment_url')
         );

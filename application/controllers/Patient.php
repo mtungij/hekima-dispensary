@@ -5,6 +5,12 @@ class Patient extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->model('PatientModel');
+        $this->load->model('DepartimentModel');
+    }
+
+    public function index() {
+        $this->load->view('patients/add_patient');
+        
     }
     public function create() {
 
@@ -70,5 +76,17 @@ class Patient extends CI_Controller
             
     }
 
+
+    public function search() {
+        $patients=$this->PatientModel->get_all_patients();
+        $this->load->view('patients/search_patient', ['patients' => $patients]);
+    }
+
+    
+    public function patient_profile() {
+        $departiments = $this->DepartimentModel->get_all_departiments();
+        $this->load->view('patients/patient_profile', ["departiments" => $departiments]);
+        
+    }
 
 }

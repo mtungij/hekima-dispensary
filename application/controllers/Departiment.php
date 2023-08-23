@@ -13,7 +13,6 @@ class Departiment extends CI_Controller
 
     public function create() {
         $data = array(
-            "staff_id" => $this->input->post('staff_id'),
             "name" => $this->input->post('departiment'),
         );
 

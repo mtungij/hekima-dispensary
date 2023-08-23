@@ -20,9 +20,7 @@ class PatientModel extends CI_Model
     public function get_all_patients()
 
     {
-        $q=$this->db->query("SELECT * FROM patient");
-        return $q->result();  
-    
-        
+        $q =$this->db->get('patient')->result();
+        return $q;
     }
 }

@@ -2,79 +2,90 @@
 
 
 
-    <div class="mx-4 px-5 py-4 bg-slate-50 shadow-md rounded-md relative -mt-14 z-10">
+    <div class="mx-4 px-5 py-4 bg-slate-100 shadow-md rounded-md relative -mt-14 z-10">
         <div class="grid grid-cols-3 gap-5">
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-gradient-to-tr from-violet-500 to-violet-300 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-purple-400 to-orange-200 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-orange-300 to-violet-100 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-gradient-to-r from-orange-400 to-red-300 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-violet-300 to-rose-100 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-gradient-to-r from-blue-400 to-red-300 h-2.5  dark:bg-purple-500" style="width: 75%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
 
-            <div class="bg-slate-200 shadow rounded-md p-4">
-                <div class="text-slate-600 text-2xl font-semibold py-2">124</div>
+            <div class="bg-white shadow rounded-md p-4">
+                <div class="text-slate-600 text-2xl font-semibold py-2">1244</div>
+                <p class="mb-3">New feedbacks</p>
                 <div class="bg-gray-100 dark:bg-gray-700">
-                   <div class="bg-purple-600 h-2.5  dark:bg-purple-500" style="width: 45%"></div>
+                   <div class="bg-gradient-to-r from-red-400 to-red-300 h-2.5 rounded-lg dark:bg-purple-500" style="width: 45%"></div>
                 </div>
                 <div class="text-slate-500 text-sm">Card explanations</div>
             </div>
+
+           
         </div>
 
 

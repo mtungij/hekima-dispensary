@@ -9,7 +9,7 @@ class Category extends CI_Controller
 
     public function index() {
         $categories = $this->CategoryModel->get_all_categories();
-        $this->load->view('labtests/category', ["categories" => $categories]);
+        $this->load->view('categories/category', ["categories" => $categories]);
     }
 
     public function create() {

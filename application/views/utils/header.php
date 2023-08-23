@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<?php echo base_url("assets/css/custom-styles.css") ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/libs/select2/select2.css") ?>">
     <link rel="stylesheet" href="<?php echo base_url("assets/css/styles.css") ?>">
       <script src="<?php echo base_url("assets/libs/jquery/jquery.js") ?>"></script>
@@ -63,7 +64,7 @@
 <body>
 
 <!-- navigation bar -->
-<nav class="fixed top-0 z-50 w-full  bg-cyan-500 text-white shadow-lg border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<nav class="fixed top-0 z-50 w-full  bg-[#01d8da] text-white shadow-lg border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div class="px-3 py-3 lg:px-5 lg:pl-3">
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-5">
@@ -78,7 +79,7 @@
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 stroke-red-500">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
               </svg>
-              <span class="self-center pl-2 text-xl sm:text-2xl whitespace-nowrap ">HEKIMA DISPENSARY</span>
+              <span class="self-center pl-2 text-lg font-bold sm:text-xl whitespace-nowrap ">HEKIMA DISPENSARY</span>
             </a>
           </div>
 
@@ -115,21 +116,21 @@
 </nav>
 
 <!-- sidebar -->
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
+<aside id="logo-sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen pt-16 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700" aria-label="Sidebar">
   <div class="mb-3 bg-slate-100 p-1 border-gray-200 dark:border-gray-700">
     <ul class="flex gap-2 text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li role="presentation" class="shrink">
-            <button class="inline-block w-full px-8 py-2 rounded-md focus:text-white focus:bg-cyan-500" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Home</button>
+            <button class="inline-block w-full px-8 py-2 rounded-md focus:text-white focus:bg-[#01d8da]" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">Home</button>
         </li>
         <li role="presentation" class="shrink">
-            <button class="inline-block w-full px-8 py-2 rounded-md focus:text-white focus:bg-cyan-500" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Reports</button>
+            <button class="inline-block w-full px-8 py-2 rounded-md focus:text-white focus:bg-[#01d8da]" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Reports</button>
         </li>
     </ul>
    </div>
 
    <div class="p-3 grid gap-2 items-center justify-center">
-      <div class="h-32 w-32 bg-cyan-500 rounded-full flex items-center justify-center">
-        <img src="" alt="">
+      <div class="h-32 w-32 bg-[#01d8da] overflow-hidden border-4 border-violet-400 rounded-full flex items-center justify-center">
+        <img src="<?php echo base_url('assets/images/profile_av.jpg') ?>" alt="profile pic">
       </div>
       <div class="text-center">
         <h5 class="font-bold text-xl">John Doe</h5>
@@ -141,8 +142,8 @@
    <div id="myTabContent">
        <ul class="h-full px-3 pb-4 overflow-y-auto bg-white  dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
             <li x-data="{ expanded: false }">
-                <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <a href="<?= site_url('') ?>">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -154,7 +155,7 @@
                 </a>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
@@ -168,7 +169,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('departiment') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -176,7 +177,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('position') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -184,7 +185,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('category') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -194,7 +195,7 @@
                 </ul>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -208,7 +209,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('labtest') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -216,7 +217,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('procedure') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -224,7 +225,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('surgical') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -234,11 +235,12 @@
                 </ul>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
                         </svg>
+                        
                         <span>Staff</span>
                     </span>
                     <svg data-accordion-icon class="w-3 h-3 rotate-180 stroke-1 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -247,7 +249,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="<?= site_url('staff') ?>" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('staff') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -255,7 +257,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="<?= site_url('staff/all_staff') ?>" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('staff/staffs') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -265,7 +267,7 @@
                 </ul>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
@@ -278,7 +280,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('patient') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -286,18 +288,26 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="<?= site_url('patient/search') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
                             <span>Search Patient</span>
                         </a>
                     </li>
+                    <li>
+                        <a  href="<?= site_url('patient/patient_profile') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                            </svg>
+                            <span>Patient Profile</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li x-data="{ expanded: false }">
                 <a href="<?= site_url('prescription') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -309,7 +319,7 @@
                 </a>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -323,7 +333,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="#" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -331,7 +341,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="#" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -341,7 +351,7 @@
                 </ul>
             </li>
             <li x-data="{ expanded: false }">
-                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                     <span class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" />
@@ -355,7 +365,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="#" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -363,7 +373,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="#" class="flex items-center gap-2 hover:text-cyan-500">
+                        <a  href="#" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -379,7 +389,7 @@
        <ul class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
             <li x-data="{ expanded: false }">
                 <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -392,7 +402,7 @@
 
                <li x-data="{ expanded: false }">
                 <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -405,7 +415,7 @@
 
               <li x-data="{ expanded: false }">
                 <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -419,7 +429,7 @@
 
                <li x-data="{ expanded: false }">
                 <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -432,7 +442,7 @@
 
                <li x-data="{ expanded: false }">
                 <a href="<?= site_url('dashboard') ?>">
-                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-cyan-500">
+                    <button type="button" @click="expanded = ! expanded" class="flex items-center justify-between w-full py-3 font-medium text-left text-gray-500 hover:text-[#01d8da]">
                         <span class="flex items-center gap-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
@@ -448,7 +458,7 @@
 </aside>
 
 <div class=" sm:ml-64 mt-14 mb-0">
-    <div class="bg-cyan-500 h-36 px-5 text-white relative pt-6 flex justify-between items-start">
+    <div class="bg-[#01d8da] h-36 px-5 text-white relative pt-6 flex justify-between items-start">
         <div>
             <h3 class="text-xl font-bold">Dashboard</h3>
             <p>Welcome to Afyasoft</p>

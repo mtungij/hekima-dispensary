@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "afyasoft";
+	src: url("./Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+	font-family: "afyasoft" !important;
+}
+
+tbody tr:hover {
+	background: #ddf1f5 !important;
+}
