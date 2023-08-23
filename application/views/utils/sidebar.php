@@ -27,6 +27,34 @@
             <!-- <i class="bi bi-chevron-right"></i> -->
           </li>
 
+          <li class="d-grid gap-2" id="flip9">
+            <div class="d-flex justify-content-between align-items-center list-hover-effect">
+              <div class="d-flex gap-2 align-items-center">
+              <i class="bi bi-gear-wide-connected"></i>
+                <span> System Settings</span>
+              </div>
+              <i class="bi bi-chevron-right fs-6"></i>
+            </div>
+            <div class="drop-down-panel1">
+               <ul class="d-grid gap-2">
+                  <li>
+                    <a href="<?php echo base_url('setting/general_setting') ?>"  class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <span>General settings</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= site_url('position') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <span>Payment Account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="<?= site_url('category') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
+                      <span>Register category</span>
+                    </a>
+                  </li>
+               </ul>
+            </div>
+          </li>
           <li class="d-grid gap-2" id="flip1">
             <div class="d-flex justify-content-between align-items-center list-hover-effect">
               <div class="d-flex gap-2 align-items-center">
@@ -134,11 +162,11 @@
                       <span>Patient profile</span>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="<?= site_url('patients/id') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
+                  <li>
+                    <a href="<?php echo base_url('setting/get_setting') ?>" class=" d-flex gap-2 align-items-center list-hover-effect">
                       <span>Patient profile</span>
                     </a>
-                  </li> -->
+                  </li>
                </ul>
             </div>
           </li>

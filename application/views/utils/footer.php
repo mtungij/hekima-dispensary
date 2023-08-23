@@ -39,6 +39,9 @@
                 $("#flip7").click(function(){
                     $(".drop-down-panel7").slideToggle("slow");
                 });
+                $("#flip9").click(function(){
+                    $(".drop-down-panel9").slideToggle("slow");
+                });
                 
                 $("#flip8").click(function(){
                     $(".drop-down-panel8").slideToggle("slow");

@@ -3,7 +3,7 @@
     <div class="navbar1">
         <ul>
             <li class="fs-5">
-                HEKIMA DISPENSARY
+               HEKIMA PHARMACY
             </li>
             <li>
                 <i class="bi bi-arrow-left-right"></i>
@@ -24,7 +24,7 @@
                 <i class="bi bi-box-arrow-left"></i>
             </li>
             <li>
-                <i class="bi bi-gear"></i>
+                <a href="http://"><i class="bi bi-gear"></i></a>
             </li>
         </ul>
     </div>
