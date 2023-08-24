@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['base_url'] = 'http://localhost/hekima_dispensary/';
+$config['base_url'] = 'http://localhost/hekima-dispensary/';
 
 
 $config['index_page'] = '';
