@@ -174,7 +174,7 @@
                   </button>
                 <ul class="grid gap-2 pl-3" x-show="expanded" x-collapse>
                     <li>
-                        <a  href="<?= site_url('departiment') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
+                        <a  href="<?= site_url('settings/general') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>
@@ -182,7 +182,7 @@
                         </a>
                     </li>
                     <li>
-                        <a  href="<?= site_url('position') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
+                        <a  href="<?= site_url('settings/payment_method') ?>" class="flex items-center gap-2 hover:text-[#01d8da]">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                             </svg>

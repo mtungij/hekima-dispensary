@@ -54,47 +54,41 @@
             </button>
          </div>
     <?php endif ?>
-    <?php echo form_open_multipart('staff/create', array("class"=> "grid grid-cols-2 gap-4"))?>
+    <?php echo form_open('settings/payment_method', array("class"=> "grid grid-cols-1 gap-4"))?>
         <div>
-            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Hospital/Dispensary Name *</label>
-            <input type="text" name="center_name" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" required>
-        </div>
-        <div>
-            <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
-            <select name="title" class="form-select bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" id="position" required>
-                <option value="">Select Title</option>
-                    <option class="p-4" value="Hospital">Hospital</option>
-                    <option class="p-4" value="Hospital">Dispensary</option>
-                    <option class="p-4" value="Hospital">Laboratory</option>
-            </select>
-        </div>
-        <div>
-            <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address</label>
-            <input type="text" name="Address" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" required>
-        </div>
-        <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address</label>
-            <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" required>
-        </div>
-        <div>
-            <label for="phone_number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone Number</label>
-            <input type="text" name="phone_number" id="phone_number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" required>
-        </div>
-        <div>
-            <label for="image_url" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Logo</label>
-            <input type="file" name="image_url" id="iamge_url" class="w-9/12 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block" required>
-        </div>
-        <div>
-            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Footer Invoice Message</label>
-            <textarea class="form-control" id="exampleTextarea" rows="4"></textarea>
+            <label for="confirmPass" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Payment Account</label>
+            <input type="text" name="account name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[hsl(181,99%,43%)] focus:border-[hsl(181,99%,43%)] block w-full p-2.5" required>
         </div>
         <button type="submit" style="width: 120px" class="col-span-2 ml-[35%] text-white bg-[#01d8da] hover:bg-[hsl(181,99%,43%)] focus:ring-4 focus:outline-none focus:ring-[hsl(181,99%,43%)] font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[hsl(181,99%,43%)] dark:hover:bg-[hsl(181,99%,43%)] dark:focus:ring-[hsl(181,99%,43%)]">Submit</button>
     </form>
 </div>
      
 
-
-
-
+<div class="bg-slate-50 p-4 mt-7">
+            <h3 class="py-2 my-4 text-2xl font-bold w-fit text-slate-700 border-b-4 border-cyan-600">Payment Accounts list</h3>
+            <table class="table-auto w-full my-4" id="tabledata">
+            <thead>
+                <tr class="bg-cyan-500 text-white">
+                    <th class="text-start py-3">S/No</th>
+                    <th class="text-start">Account Name</th>
+                    <th class="text-start">Phone Number</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-b border-slate-300 ">
+                    <td class="p-3">01</td>
+                    <td>LIPA KWA M-PESA</td>
+                    <td>196090</td>
+                </tr>
+                <tr class="border-b border-slate-300 ">
+                    <td class="p-3">02</td>
+                    <td class="p-3">Halopesa</td>
+                    <td>062345678</td>
+ 
+                </tr>
+            </tbody>
+            </table>
+        </div>
 
 <?php include APPPATH."/views/utils/footer.php"?>

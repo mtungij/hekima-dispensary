@@ -402,33 +402,7 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
                     </span>
-                    <button data-modal-target="investigation-modal" data-modal-toggle="investigation-modal" class="bg-violet-400 text-white hover:bg-violet-600 leading-tight text-left text-sm py-2 px-5 rounded inline-block">Investigation</button>
-                    <p class="text-sm">Step details here</p>
-
-                                    <!-- Main modal -->
-                        <div id="investigation-modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                            <div class="relative w-full max-w-2xl max-h-full">
-                                <!-- Modal content -->
-                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                    <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="investigation-modal">
-                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                                        </svg>
-                                        <span class="sr-only">Close modal</span>
-                                    </button>
-                                    <div class="px-6 py-6 lg:px-8">
-                                        <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Investigation</h3>
-                                        <p class="text-slate-600 text-sm py-2">Description</p>
-                                        <form class="space-y-6" action="#">
-                                            <div id="editor8">
-                                            
-                                            </div>
-                                        <button type="submit" class="w-full text-white bg-violet-400 hover:bg-violet-800 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-violet-600 dark:hover:bg-violet-700 dark:focus:ring-violet-800">Make transfer</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                   <a href="<?php echo base_url('Prescription/investigat') ?>"> <button data-modal-target="investigation-modal" data-modal-toggle="investigation-modal" class="bg-violet-400 text-white hover:bg-violet-600 leading-tight text-left text-sm py-2 px-5 rounded inline-block">Investigation</button> </a>
                 </li>
               </ol>
 
