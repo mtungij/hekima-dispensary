@@ -90,7 +90,7 @@
 
 
         <div class="bg-slate-50 p-4 mt-7">
-            <h3 class="py-2 my-4 text-2xl font-bold w-fit text-slate-700 border-b-4 border-cyan-600">Recently patients</h3>
+            <h3 class="py-2 my-4 text-2xl font-bold w-fit text-slate-700 border-b-4 border-cyan-600">Patients Status</h3>
             <table class="table-auto w-full my-4" id="tabledata">
             <thead>
                 <tr class="bg-cyan-500 text-white">

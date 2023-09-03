@@ -78,6 +78,7 @@ class Staff extends CI_controller
                         "username" => $this->input->post('username'),
                         "email" => $this->input->post('email'),
                         "phone_number" => $this->input->post('phone_number'),
+                        "salary" => $this->input->post('salary'),
                         "departiment" => $this->input->post('departiment'),
                         "position" => $this->input->post('position'),
                         "gender" => $this->input->post('gender'),
